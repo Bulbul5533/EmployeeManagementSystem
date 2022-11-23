@@ -1,0 +1,12 @@
+.showcountdata {
+    box-shadow: 5px 10px 8px 10px #888888;
+    height: 300px;
+    background: linear-gradient(to top, #112240, #b9fded);
+    color: white;
+    margin-left: 8%;
+}
+
+.count {
+    font-weight: 900;
+    font-size: 130px;
+}

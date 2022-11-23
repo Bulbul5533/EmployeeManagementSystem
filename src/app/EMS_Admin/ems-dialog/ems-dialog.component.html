@@ -1,0 +1,100 @@
+<h1 mat-dialog-title>
+    <mat-card class="header">{{Empinfo?.Employee_id}}</mat-card>
+</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]="Update_info">
+        <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="Basic Info" formGroupName="Basic_Info">
+                <div class="row m-5">
+                    <mat-label class="col">Title:</mat-label>
+                    <input type="text" readonly class="form-control col" value="{{Empinfo?.Title}}">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">First_name:</mat-label>
+                    <input type="text" [readonly]="var_editMe" class="form-control col" value="{{Empinfo?.First_name}}"
+                        formControlName="First_name">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">Last_name:</mat-label>
+                    <input type="text" [readonly]="var_editMe" class="form-control col" value="{{Empinfo?.Last_name}}"
+                        formControlName="Last_name">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">Gender:</mat-label>
+                    <input type="text" [readonly]="var_editMe" class="form-control col" value="{{Empinfo?.Gender}}"
+                        formControlName="Gender">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">DOB:</mat-label>
+                    <input type="text" [readonly]="var_editMe" class="form-control col" value="{{Empinfo?.DOB}}"
+                        formControlName="DOB">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">Marital_Status:</mat-label>
+                    <input type="text" [readonly]="var_editMe" class="form-control col"
+                        value="{{Empinfo?.Marital_Status}}" formControlName="Marital_Status">
+                </div>
+            </mat-tab>
+            <mat-tab label="Role and Qualification" formGroupName="Role_and_Qualification">
+                <div class="row m-5">
+                    <mat-label class="col">Role:</mat-label>
+                    <input type="text" [readonly]="var_superEdit" class="form-control col" value="{{Empinfo?.Role}}"
+                        formControlName="Role">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">Qualification:</mat-label>
+                    <input type="text" [readonly]="var_editMe" class="form-control col"
+                        value="{{Empinfo?.Qualification}}" formControlName="Qualification">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">Type_of_employee:</mat-label>
+                    <input type="text" [readonly]="var_superEdit" class="form-control col"
+                        value="{{Empinfo?.Type_of_employee}}" formControlName="Type_of_employee">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">Project_Domain:</mat-label>
+                    <input type="text" [readonly]="var_superEdit" class="form-control col"
+                        value="{{Empinfo?.Project_Domain}}" formControlName="Project_Domain">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">Department:</mat-label>
+                    <input type="text" [readonly]="var_superEdit" class="form-control col"
+                        value="{{Empinfo?.Department}}" formControlName="Department">
+                </div>
+            </mat-tab>
+            <mat-tab label="Contacts" formGroupName="Contacts">
+                <div class="row m-5">
+                    <mat-label class="col">Mail:</mat-label>
+                    <input type="text" [readonly]="var_editMe" class="form-control col" value="{{Empinfo?.Email}}"
+                        formControlName="Email">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">Mobile_Number:</mat-label>
+                    <input type="text" [readonly]="var_editMe" class="form-control col"
+                        value="{{Empinfo?.Mobile_Number}}" formControlName="Mobile_Number">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">Address:</mat-label>
+                    <input type="text" [readonly]="var_editMe" class="form-control col" value="{{Empinfo?.Address}}"
+                        formControlName="Address">
+                </div>
+                <div class="row m-5">
+                    <mat-label class="col">Personal ID:</mat-label>
+                    <input type="text" [readonly]="var_editMe" class="form-control col" value="{{Empinfo?.Personal_id}}"
+                        formControlName="Personalid">
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </form>
+</div>
+
+
+<div mat-dialog-actions class="row">
+    <button mat-button class="btn btn-outline-warning col" [disabled]="var_Editbtn" (click)="EditMe()">Edit</button>
+    <button mat-button class="btn btn-outline-warning col" [disabled]="var_SuperEditbtn" (click)="SuperEdit()">Super
+        Edit</button>
+    <button mat-button class="btn btn-outline-warning col" [disabled]="var_submitbtn"
+        (click)="DataPush()">Submit</button>
+    <button mat-button mat-dialog-close class="btn btn-outline-warning col">Close</button>
+</div>

@@ -1,0 +1,15 @@
+.content{
+    padding: 50px;
+}
+
+.cont{
+    margin-top: 2%;
+}
+.cont:hover{
+    background: linear-gradient(to right,  #64ffda,#112240);
+}
+.showcontent{
+    padding: 100px;
+    margin-top: -7%;
+}
+
