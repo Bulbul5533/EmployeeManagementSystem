@@ -1,0 +1,30 @@
+<div class="AdminHead row">
+    <h1 class="col-lg-10 col-sm-10">Employee Data Management</h1>
+    <button class="btn btn-outline-warning col-lg-1 col-sm-2 offset-lg-1" (click)="Logout()">Logout</button>
+</div>
+<br>
+<div class="AdminBody">
+    <mat-tab-group mat-align-tabs="center" dynamicHeight>
+        <mat-tab label="Dasboard">
+            <br>
+            <app-ems-dashboard class="m-2" [Total]="Rtn_Total()" [Department]="Rtn_Departments()"
+                [Approvals]="Rtn_Approvals()"></app-ems-dashboard>
+        </mat-tab>
+        <mat-tab label="Department">
+            <app-ems-departments [DeptData]="Rtn_TotalDept()"></app-ems-departments>
+        </mat-tab>
+        <mat-tab label="Attendance">
+            <app-ems-attendance></app-ems-attendance>
+        </mat-tab>
+        <mat-tab label="Employees Info">
+            <br>
+            <app-ems-all-empinfo></app-ems-all-empinfo>
+        </mat-tab>
+        <mat-tab label="New Employee Form">
+            <app-ems-new-emp-form class="m-2"></app-ems-new-emp-form>
+        </mat-tab>
+    </mat-tab-group>
+    <div class="matcontent col-lg-10">
+
+    </div>
+</div>

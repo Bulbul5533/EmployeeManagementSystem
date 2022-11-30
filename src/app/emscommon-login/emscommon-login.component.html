@@ -1,0 +1,34 @@
+<div class=" header">
+    <h1 class="hfile">
+        <span style="color:white;">E</span>
+        <span style="color:white;">M</span>
+        <span style="color:white;">S</span>
+    </h1>
+</div>
+<div class="container ">
+    <mat-card>
+        <div class="contentpage d-flex justify-content-center " [formGroup]="GetLoginInfo">
+            <mat-card class="glass row">
+                <h1>Login Page</h1>
+                <mat-card-content>
+                    <div class="row">
+                        <mat-label class="col-lg-6">User Name: </mat-label>
+                        <input type="text" matInput required id="UserName" formControlName="Usercode"
+                            class="form-control col-lg-6">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <mat-label class="col-lg-6">Password: </mat-label>
+                        <input type="password" matInput required id="Password" formControlName="Passcode"
+                            class="form-control col-lg-6">
+                    </div>
+                </mat-card-content>
+                <br>
+                <mat-card-actions class="row">
+                    <button type="submit" class="btn btn-outline-warning col-lg-5" (click)="SignIn()"> Login</button>
+                    <button type="submit" class="btn btn-outline-warning col-lg-5 offset-lg-2"> New User</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </mat-card>
+</div>
